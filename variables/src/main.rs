@@ -19,6 +19,17 @@ fn main() {
 
     // let d = plus_one_not_working(5);
     // println!("d = {d}"); // This will not compile because the function does not return a value
+
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2; //returns a value from the loop
+        }
+    };
+    println!("Result = {result}");
 }
 
 fn plus_one(x: i32) -> i32 {
